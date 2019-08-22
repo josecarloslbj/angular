@@ -1,0 +1,31 @@
+<p-card header="" [style]="{width: '360px', margin: 'auto'}" styleClass="ui-card-shadow" class="center"
+  class="centralizar">
+  <p-header>
+    <img src="Card" src="https://fbnewsroombr.files.wordpress.com/2018/10/privacy-001.jpeg?w=960&h=540">
+  </p-header>
+  <div class="ui-g ui-fluid">
+    <div class="ui-g-12 ui-md-12">
+      <div class="ui-inputgroup">
+        <span class="ui-inputgroup-addon"><i class="pi pi-check"></i></span>
+        <input type="text" pInputText placeholder="Usuário">
+      </div>
+    </div>
+    <div class="ui-g-12 ui-md-12">
+      <div class="ui-inputgroup">
+        <span class="ui-inputgroup-addon"><i class="pi pi-check"></i></span>
+        <input type="text" pInputText placeholder="Senha">
+      </div>
+    </div>
+    <div class="ui-g-12 ui-md-12">
+      <div class="ui-inputgroup">
+        <label>Lembrar </label>
+        <p-inputSwitch [(ngModel)]="checked"></p-inputSwitch>
+      </div>
+    </div>
+  </div>
+  <p-footer>
+    <button pButton type="button" label="Entrar" icon="pi pi-check" style="margin-right: .25em"
+      (click)='login();'></button>
+    <button pButton type="button" label="Limpar" icon="pi pi-times" class="ui-button-primary"></button>
+  </p-footer>
+</p-card>
