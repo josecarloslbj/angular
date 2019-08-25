@@ -14,6 +14,7 @@ import { StructureModule } from './core/structure/structure.module';
 import { LoginModule } from './login/login.module';
 import { LoginComponent } from './login/login.component';
 import { MasterModule } from './master/master.module';
+import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 
 
 @NgModule({
@@ -36,7 +37,11 @@ import { MasterModule } from './master/master.module';
     MasterModule
 
   ],
-  providers: [],
+  providers: [  
+    { provide: LocationStrategy,
+    useClass: HashLocationStrategy
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
